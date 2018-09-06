@@ -284,6 +284,11 @@ public class SFTPUtil {
        test173();
     }
     
+    /**
+     * 这个是本地虚拟机的，在实验的时候需要关闭防火墙
+     * @throws FileNotFoundException
+     * @throws SftpException
+     */
     public static void test146() throws FileNotFoundException, SftpException {
     	 SFTPUtil sftp = new SFTPUtil("root", "881213", "192.168.150.146", 22);
          sftp.login();
@@ -307,6 +312,13 @@ public class SFTPUtil {
         sftp.logout();
     }
     
+    /**
+     * 刚开始测试没有通过
+     * 由于被防火墙给挡住了
+     * 配置好后再试试
+     * @throws FileNotFoundException
+     * @throws SftpException
+     */
     public static void test173() throws FileNotFoundException, SftpException {
     	SFTPUtil sftp = new SFTPUtil("merry", "123456", "10.10.10.173", 22);
         sftp.login();
